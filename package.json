@@ -1,0 +1,22 @@
+{
+  "name": "api-compacta",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "express": "^4.17.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "scripts": {
+    "start": "node dist/bundle.js",
+    "babel": "babel ./main.js -o bundle.js -w",
+    "build-prod": "webpack --production-mode",
+    "docker": "docker build -t api-webpack:0.0.1 ."
+  }
+}
